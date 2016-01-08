@@ -4,9 +4,25 @@
   <body class = <%= classname %>>
     <% include partials/page/header.ejs %>
     <div class="container">
-      <h1>Welcome <%= title %></h1>
-      <p>Some data comes here</p>
+      <h5>Welcome <%= title %></h5>
+      <p>Last login : <%= lastlogin %> </p>
+      <a href="#" class="btn btn-success">Logout&nbsp<span class="glyphicon glyphicon-user"></span></a>
+      <hr>
+      <div class="jumbotron">
+          <h3>Favorite friends!</h3>
+          <p>...</p>
+          <p><a class="btn btn-primary btn-xs" href="#" role="button">Hide Favorites</a></p>
+      </div>
 
+         <form>
+               <div class="input-group">
+              <input type="text" class="form-control" placeholder="Message...">
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button">Send&nbsp<span class="glyphicon glyphicon-send"></span></button>
+              </span>
+    </div>
+         </form>
+      <hr>
       <% if (typeof(users) !== 'undefined') { %>
         <ul>
           <% for(var i=0; i<users.length; i++) { %>
