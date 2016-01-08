@@ -1,0 +1,23 @@
+{
+  "name": "babble",
+  "version": "1.0.0",
+  "description": "Chat App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatkrishnan/babble.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/venkatkrishnan/babble/issues"
+  },
+  "homepage": "https://github.com/venkatkrishnan/babble#readme",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4"
+  }
+}
