@@ -1,10 +1,12 @@
-var express = require('express');
-var app = express();
+var express = require('express'),
+  app = express(),
+  path = require('path');
 
 var routes = require('./routes');
 var babble = require('./routes/babble');
 
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes);
 app.get('/babble', babble);
