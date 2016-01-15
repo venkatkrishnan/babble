@@ -4,16 +4,21 @@
   <body class = <%= classname %>>
     <% include partials/page/header.ejs %>
     <div class="container">
-      <h1>Welcome <%= title %></h1>
-      <p>Some data comes here</p>
 
-      <% if (typeof(users) !== 'undefined') { %>
-        <ul>
-          <% for(var i=0; i<users.length; i++) { %>
-            <li><%= users[i] %></li>
-          <% } %>
-        </ul>
-      <% } %>
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Sign In</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="Username" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
     </div>  <!-- end of container -->
     <% include partials/page/footer.ejs %>
     <% include partials/page/jsdefaults.ejs %>

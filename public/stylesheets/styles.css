@@ -1,6 +1,7 @@
 .pageTitle{
   font-family: satisfy;
 }
-body{
-  
+form{
+  max-width: 300px;
+  margin:0 auto;
 }
