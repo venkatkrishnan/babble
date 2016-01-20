@@ -8,6 +8,14 @@
     <p><a class="btn btn-primary btn-xs" href="#" role="button">Hide Favorites</a></p>
   </div>
 
+<!-- controller for displaying chats -->
+  <div class="panel" ng-controller="chatController">
+    Sent by : {{sender}}
+    To:{{reciever}}
+    Time:{{timestamp}}
+    Message:{{message}}
+  </div>
+
   <form>
    <div class="input-group">
     <input type="text" class="form-control" placeholder="Message...">
