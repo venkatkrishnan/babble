@@ -5,13 +5,23 @@ angular.module('mainApp').controller('loginController', function($scope) {
 });
 
 angular.module('mainApp').controller('chatController', function($http,$rootScope) {
-    $rootScope.sender='Arun';
+
   $http.get('/chats').success(function successCallback(data){
-    alert(data);
-    $rootScope.reciever=data.reciever;
-    $rootScope.message=data.message;
-    $rootScope.timestamp=Date();
-    $rootScope.sender=data.sender;
+    //console.log(data);
+    var chatDataItems=[];
+      
+    angular.forEach(data,function(value,key){
+        var chatData={};
+        chatData.reciever=value.reciever;
+        chatData.sender=value.sender;
+        chatData.message=value.message;
+        chatData.timestamp=Date();
+        chatDataItems.push(chatData);
+});
+      
+    console.log(chatDataItems);
+    $rootScope.chatItems=chatDataItems;
+
   });
 });
 
@@ -24,3 +34,7 @@ mainApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'pages/babble.html'
     });
 }]);
+
+angular.module('mainApp').controller('favFriendsCtrl',function($http,$rootScope){
+    
+});

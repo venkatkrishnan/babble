@@ -12,14 +12,13 @@ router.get('/',function(req,res,next){
 router.get('/chats',function(req,res,next){
   console.log("Serving chat data request");
   chats.findUser('arun',function(data){
-    var result={
-      sender:data.sender,
-      reciever:data.reciever,
-      timestamp:data.timestamp,
-      message:data.message
-    };
-
-    res.send(result);
+    // var result={
+    //   sender:data.sender,
+    //   reciever:data.reciever,
+    //   timestamp:data.timestamp,
+    //   message:data.message
+    // };
+    res.send(data);
     })
 });
 

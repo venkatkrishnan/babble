@@ -9,11 +9,15 @@
   </div>
 
 <!-- controller for displaying chats -->
-  <div class="panel" ng-controller="chatController">
-    Sent by : {{sender}}
-    To:{{reciever}}
-    Time:{{timestamp}}
-    Message:{{message}}
+  <div class="panel chatDisplay" ng-controller="chatController">  
+        <div class="panel chatDisplay" ng-repeat="chat in chatItems">
+
+        <span class="chatStub">To:</span><span class="chatStubResponse">{{chat.reciever}}</span><br>
+        <span class="chatStub">Time:</span><span class="chatStubResponse">{{chat.sender}}</span><br>
+        <span class="chatStub">Message:</span><span class="chatStubResponse">{{chat.message}}</span><br>
+        <span class="chatStub">Message:</span><span class="chatStubResponse">{{chat.timestamp}}</span><br>
+
+        </div>
   </div>
 
   <form>

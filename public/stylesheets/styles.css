@@ -5,3 +5,17 @@ form{
   max-width: 300px;
   margin:0 auto;
 }
+.chatStub{
+    font-weight: bolder;
+    color: purple;
+}
+.chatStubResponse{
+    font-weight:600;
+    color: forestgreen;
+    text-transform: capitalize;
+}
+.chatDisplay{
+    background-color: beige;
+    text-align: left;
+    font-style:normal;
+}
