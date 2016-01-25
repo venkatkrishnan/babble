@@ -9,6 +9,7 @@ angular.module('mainApp').controller('chatController', function($http,$rootScope
   $http.get('/chats').success(function successCallback(data){
     //console.log(data);
     var chatDataItems=[];
+    var currentUser='arun';
       
     angular.forEach(data,function(value,key){
         var chatData={};
@@ -16,7 +17,14 @@ angular.module('mainApp').controller('chatController', function($http,$rootScope
         chatData.sender=value.sender;
         chatData.message=value.message;
         chatData.timestamp=Date();
+        
+        if(chatData.sender==currentUser)
+            chatData.alignRight=true;
+        else
+            chatData.alignRight=false;
+        
         chatDataItems.push(chatData);
+        
 });
       
     console.log(chatDataItems);

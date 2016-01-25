@@ -8,7 +8,7 @@
 
 
     Conversation.statics.findUser=function(username,callback){
-      this.model('Conversation').find({sender:'arun'},function (err,data ) {
+      this.model('Conversation').find({},function (err,data ) {
         if (err) return console.error(err);
         callback(data);
     })

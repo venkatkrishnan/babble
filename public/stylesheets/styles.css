@@ -9,13 +9,35 @@ form{
     font-weight: bolder;
     color: purple;
 }
-.chatStubResponse{
+.chat-message{
     font-weight:600;
+    font-family: 'Raleway',sans-serif;
     color: forestgreen;
-    text-transform: capitalize;
+    text-transform:lowercase;
+    text-align: right;
+    letter-spacing: 1px;
+    
 }
 .chatDisplay{
-    background-color: beige;
-    text-align: left;
+    background-color:azure;
     font-style:normal;
+    border-radius: 8px;
+}
+.chat-align-right{
+    padding: 0px 60px;
+}
+
+.chat-align-left{
+    padding: 0px 10px;
+}
+
+.chat-time{
+    color: darkolivegreen;
+}
+
+.chat-sender{
+    color:chocolate;
+    font-style:italic;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
 }
